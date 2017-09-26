@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Сапер";
+}
+<link rel="stylesheet" href="~/Content/flag.css" />
+<script>
+    var bomb =10;
+    var SizeX = 10;
+    var SizeY = 10;
+    var Types = '@ViewBag.Types';
+</script>
+@Scripts.Render("~/Scripts/Custom/Game.js")
+@Scripts.Render("~/Scripts/Custom/Canvs.js")
+<body>
+    <script>
+    </script>
+    <div>
+        <div id="Game" style="background:#d9d9d9;display:inline-block;padding:4px">
+            <div id="header">
+                <div id="F" class="blocks">
+                    <div id="FLAG" class="countFlags"></div>
+                </div>
+            </div>
+            <canvas id="canvas">апправіапвап</canvas>
+            <div class="downBlock">
+                <div id="countCell" class="countCells">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

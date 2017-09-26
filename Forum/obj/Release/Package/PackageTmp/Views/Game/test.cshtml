@@ -1,0 +1,16 @@
+﻿@model Forum.Models.User
+@Scripts.Render("~/bundles/jquery")
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"> </script>
+@using (Html.BeginForm("gf", "Game", FormMethod.Post))
+{
+    @Html.Hidden("name", "ЧЛЕЕЕЕЕЕЕЕН");
+    <input type="submit" value="submit" />
+    
+}
+
+@using (Ajax.BeginForm("InDB", "Game", new AjaxOptions { HttpMethod = "post", UpdateTargetId="f" }))
+{
+    @Html.Hidden("name", "dfdfdf");
+    <input type="submit" value="submit" />
+}
+<div id="f"></div>

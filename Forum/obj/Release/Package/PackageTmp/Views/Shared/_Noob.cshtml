@@ -1,0 +1,22 @@
+﻿<link rel="stylesheet" href="~/Content/flag.css" />
+<div id="header">
+    <div id="F" class="blocks">
+        <div id="FLAG" class="countFlags"></div>
+    </div>
+</div>
+<canvas id="canvas"></canvas>
+<div class="downBlock">
+    <div id="countCell" class="countCells">
+    </div>
+</div>
+
+
+@Scripts.Render("~/Scripts/Custom/Canvs.js")
+
+<script>
+    SizeX = 10;
+    SizeY = 10;
+    bomb = 10;
+    typeGame = "Noob";
+    create();
+</script>

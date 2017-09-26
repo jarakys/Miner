@@ -1,0 +1,34 @@
+﻿.blocks {
+    width: 30px;
+    height: 30px;
+    background: #b9b9b9;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background-image: url("Image/Cw0t6MTGNCo.jpg");
+    -webkit-user-select: none;
+}
+.countFlags {
+    padding-left: 35px;
+    float: left;
+    font-size: 25px;
+    -webkit-user-select: none;
+}
+.downBlock {
+    background: #b9b9b9;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    -webkit-user-select: none;
+}
+.countCells {
+    float: left;
+    font-size: 25px;
+    -webkit-user-select: none;
+    cursor: pointer;
+}
+.ddddd {
+    padding-right: 35px;
+    float: right;
+    font-size: 25px;
+}

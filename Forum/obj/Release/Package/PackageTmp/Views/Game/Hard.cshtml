@@ -1,0 +1,38 @@
+﻿
+@Scripts.Render("~/bundles/jquery")
+<link rel="stylesheet" href="~/Content/flag.css" />
+<script src="/Scripts/jquery.validate.js"></script>
+<script src="/Scripts/jquery.validate.unobtrusive.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"> </script>
+<script>
+    SizeX = 30;
+    SizeY = 15;
+    bomb = 100;
+    typeGame = "Hard";
+</script>
+<div style="display: -webkit-box">
+    <ul class="nav navbar-nav">
+        <li>@Ajax.ActionLink("Новичек", "Miner", "Game", new { ids = "Noob" }, new AjaxOptions { UpdateTargetId = "Game", InsertionMode = InsertionMode.Replace }, new { @class = "jijga", id = "Noob" })</li>
+        <li>@Ajax.ActionLink("Любитель", "Miner", "Game", new { ids = "Medium" }, new AjaxOptions { UpdateTargetId = "Game", InsertionMode = InsertionMode.Replace }, new { @class = "jijga", id = "Medium" })</li>
+        <li>@Ajax.ActionLink("Прфои", "Miner", "Game", new { ids = "Hard" }, new AjaxOptions { UpdateTargetId = "Game", InsertionMode = InsertionMode.Replace }, new { @class = "jijga", id = "Hard" })</li>
+    </ul>
+
+</div>
+<div id="Game" style="background:#d9d9d9;display:inline-block;padding:4px">
+    <div id="header">
+        <div id="F" class="blocks">
+            <div id="FLAG" class="countFlags"></div>
+        </div>
+    </div>
+    <canvas id="canvas"></canvas>
+    <div class="downBlock">
+        <div id="countCell" class="countCells">
+        </div>
+    </div>
+</div>
+<div id="play"></div>
+@Scripts.Render("~/Scripts/Custom/Games.js")
+@Scripts.Render("~/Scripts/Custom/Canvs.js")
+@Scripts.Render("~/Scripts/Custom/setUrl.js")
+<script>    create();</script>
+<div id="nifa"></div>

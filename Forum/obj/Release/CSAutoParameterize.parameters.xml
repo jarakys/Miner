@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Строка подключения в web.config, используемая приложением для доступа к базе данных." defaultValue="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-Forum-20170824112123.mdf;Initial Catalog=aspnet-Forum-20170824112123;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\GamePlatform\\Forum\\Forum\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="DBConnection1-Web.config Connection String" description="DBConnection1 Строка подключения в web.config, используемая приложением для доступа к базе данных." defaultValue="data source=(localdb)\MSSQLLocalDB;Initial Catalog=userstore.mdf;Integrated Security=True;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\GamePlatform\\Forum\\Forum\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DBConnection1']/@connectionString" />
+  </parameter>
+</parameters>

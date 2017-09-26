@@ -1,0 +1,100 @@
+﻿
+@model Forum.Models.User
+@Scripts.Render("~/bundles/jquery")
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"> </script>
+<link rel="stylesheet" href="~/Content/flag.css" />
+<h2></h2>
+<div style="display: -webkit-box">
+    <ul class="nav navbar-nav">
+        <li>@Html.ActionLink("Новичек","Noob","Game")</li>
+        <li>@Html.ActionLink("Любитель", "Medium", "Game")</li>
+        <li>@Html.ActionLink("Профи", "Hard", "Game")</li>
+    </ul>
+
+</div>
+<div>
+    <div id="Game" style="background:#d9d9d9;display:inline-block;padding:4px">
+        <div id="header">
+            <div id="F" class="blocks">
+                <div id="FLAG" class="countFlags"></div>
+            </div>
+        </div>
+        <canvas id="canvas" height="0" width="0" ></canvas>
+        <div class="downBlock">
+            <div id="countCell" class="countCells">
+            </div>
+        </div>
+    </div>
+</div>
+@Scripts.Render("~/Scripts/Custom/Games.js")
+@Scripts.Render("~/Scripts/Custom/Canvs.js")
+<script>  </script>
+
+
+
+
+@using (Ajax.BeginForm("InDB", "Game", new AjaxOptions { HttpMethod = "Post" }))
+{
+
+    @(Html.HiddenFor(x => x.Name));
+    <input type="submit" value="submit" />
+
+}
+<div class="navbar-collapse collapse">
+
+    <script>
+        $(function () {
+            $('form#mnax').on('submit', function (e) {
+
+                e.preventDefault();
+
+                $.ajax({
+                    type: this.method,
+                    url: this.action,
+                    data: $('form#mnax').serialize(),
+                    success: function () {
+                        alert('form was submitted');
+                    },
+                    error: function () {
+                        alert("ті тупой");
+                    }
+                });
+
+            });
+
+        });
+    </script>
+    <script>
+      /*  var names = prompt("Ваш ник", "");
+        document.getElementById("Name").value = names;
+        $('#Noob').click(function () {
+            bomb = 1;
+            SizeX = 10;
+            SizeY = 10;
+            typeGame = "Noob";
+            create();
+        });
+        $('#Medium').click(function () {
+            bomb = 50;
+            SizeX = 15;
+            SizeY = 15;
+            typeGame = "Medium";
+            create();
+        });
+        $('#Hard').click(function () {
+            bomb = 100;
+            SizeX = 35;
+            SizeY = 15;
+            typeGame = "Hard";
+            create();
+        });*/
+
+    </script>
+
+
+
+
+
+</div>
+<div id="nifa"></div>
+
